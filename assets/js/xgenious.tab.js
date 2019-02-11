@@ -17,7 +17,9 @@ for (let i = 0; i < xgtabnav.length; i++) {
             }
              this.classList.add('active');
              const contentID = tabNav[j].attributes['data-target'].value.substr(1);
-             const tabPaneId = document.getElementsByClassName('xgtab-pane');
+             const tabPaneId = this.parentNode.nextSibling.nextElementSibling.children;
+            //  console.log(tabPaneId)
+             //document.getElementsByClassName('xgtab-pane');
             for (let t = 0; t < tabPaneId.length; t++) {
                 tabPaneId[t].classList = 'xgtab-pane fade';
             }
